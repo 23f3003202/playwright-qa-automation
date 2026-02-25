@@ -8,7 +8,7 @@ const { chromium } = require('playwright');
   let grandTotal = 0;
 
   for (let seed of seeds) {
-    const url = `https://sanand0.github.io/tdsdata/js_table/=${seed}`;
+    const url = `https://sanand0.github.io/tdsdata/js_table/?seed=${seed}`;
     await page.goto(url);
 
     const numbers = await page.$$eval("table td", cells =>
